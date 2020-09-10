@@ -3,7 +3,7 @@
 % Chapter 1 1-9, 11
 % Chapter 2 2,5,11-14,17,18
 %% Problem A.1
-% 
+% Keri coded part a and b. Keri commented part a and b. 
 % (a) plot |sin(x)| using fplot 
 % 
 sinx = @(x)(sin(x)) % making sinx an equation that fplot can call
@@ -155,3 +155,63 @@ i=i+1;
 figure(i);
 ezpolar('sqrt(sin(2*t))')
 hold off
+%% Problem B.2
+% Keri coded this and commented this.
+%
+%Show that the point P = (2, 0, 3) is equidistant from the two points
+%Q1 = (0.12, -1, 5.55) and Q2 = (3.88, 1, 0.45).
+%
+pq1 = [0.12-2, -1, 5.55-3]; %creating a vector from point P to point Q1
+distance1 = norm(pq1) %taking the norm of the vector pq1 to find the distance from point P to point Q1
+pq2 = [3.88-2, 1, 0.45-3]; %creating a vector from point P to point Q2
+distance2 = norm(pq2) %taking the norm of the vector pq2 to find the distance from point P to point Q2
+%
+% distance1 = distance2 means that point P is equidistant to point Q1 and
+% Q2.
+%% Problem B.5
+% Keri coded this and commented this.
+%
+% Compute the angle (in degrees) that the vector a = -24.56i + 44.689j
+% makes with the x-axis, measured counterclockwise from the x-axis
+%
+a = [-24.56,44.689,0]; %creating vector a
+b = [1,0,0]; % vector b is the x axis, or the i component of a 
+theta = acos(dot(a, b)/(norm(a)*norm(b))); % finds the angle in radians between vector a and the x axis
+theta*180/pi %converts the angle into degrees
+%% Problem B.11
+% Keri coded this and commented this
+%
+% Prove the identity
+% ||a × b|| ^2 = ||a|| ^2 * ||b|| ^2 ? (a · b) ^2
+% by assigning letter (i.e., variable) coordinates to a and b and evaluating both sides
+% of the identity using MATLAB.
+%
+a = [1,1,1]; %a generic vector for vector a 
+b = [1,2,3]; % a generic vector for vector b
+lhs = dot(cross(a,b),cross(a,b)) %calculating the left hand side of the expression
+rhs = (norm(a))^2 * (norm(b))^2 - dot(a,b)^2 %calculating the right hand side of the expression
+%
+% Because the left hand side is equal to the right hand side this identity
+% is true.
+%% Problem B.12
+% Keri coded part a and b and commented part a and b. 
+%
+% (a) Find the volume of the parallelepiped determined by the three vectors:
+% a = (8324, 5789, 2098),
+% b = (9265, ?246, 8034),
+% c = (4321, ?765, 7903).
+%
+a = [8324, 5789, 2098];
+b = [9265, ?246, 8034];
+c = [4321, ?765, 7903];
+volume = dot(a,cross(b,c))
+%%
+% (b)  Now consider all parallelepipeds whose base is determined by the vectors
+% a = (2, 0, ?1) and b = (0, 2, ?1), and whose height is variable c = (x, y,z).
+% Assume that x, y, and z are positive and c = 1. Use the triple product to compute a formula for the volume of the parallelepiped involving x, y, and z. Compute the maximum value of that volume in terms of x and y as follows. It is clear
+% from the following formula:
+% c · (a × b) = c a × b cos ?,
+% where ? is the angle between c and the line perpendicular to the plane determined by a and b, that the maximum occurs when c is perpendicular to both
+% a and b. Use the dot product to determine the vector c yielding the maximum
+% value. (We will see in Chapter 7, Optimization in Several Variables, how to
+solve multivariable max-min problems.)
