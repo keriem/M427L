@@ -41,6 +41,8 @@ plot(x0(3),y0(3),'.k','MarkerSize',5)
 plot(x0(4),y0(4),'.k','MarkerSize',5)
 plot(x0(5),y0(5),'.k','MarkerSize',5)
 
+fprintf("The gradient of f disappears at real solutions (%f,%f), (%f,%f), and (%f,%f)", x0(1),y0(1),x0(2),y0(2),x0(3),y0(3));
+
 %%
 % (d): Draw the gradient field of f. We notice that all vectors are
 % perpendicular to the level curve. At the origin, the function value
