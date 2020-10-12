@@ -28,6 +28,7 @@ hold on
 % solution. (0,0) is at the center of the level curve, and it is a saddle;
 % the other two represent local minimum.
 
+syms x y;
 gradmyfunc=jacobian(myfunc(x,y));
 S=solve(gradmyfunc==[0,0],[x y]);
 x0=S.x;
