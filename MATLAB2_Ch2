@@ -19,7 +19,8 @@ numcross1 = cross(F,G)
 % Harsha coded this problem
 
 % (A) F(t)=(cos(t),sin(t),t/2)
-
+% The direction of motion in the xy-plane is in a circular motion and the function
+% moves up on the z-axis, making it a helical shape that moves up vertically as t increases.
 t=linspace(-5*pi,5*pi);
 figure(1)
 x=cos(t);
@@ -29,7 +30,8 @@ plot3(x,y,z)
 axis equal
 
 % (B) F(t)=(exp(-t)sin(t),exp(-t)cos(t),1)
-
+% The direction of motion is, after an initial swirl about 0, pointing down on the y-axis and
+% gradually increasing on the x-axis as t increases.
 t=linspace(-pi,pi);
 figure(2)
 x=exp(-t).*sin(t);
@@ -38,8 +40,9 @@ z=1;
 plot(x,y)
 axis equal
 
-%(C) F(t)=(t,t^2,t^3)
-
+% (C) F(t)=(t,t^2,t^3)
+% As t increases, the function points upwards and positive on every axis as it moves past
+% the point (0,0).
 t=linspace(-2,2);
 figure(3)
 x=t;
